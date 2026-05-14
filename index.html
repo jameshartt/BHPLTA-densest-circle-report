@@ -17,6 +17,21 @@ html, body {
   line-height: 1.45;
   margin: 0; padding: 0;
 }
+/* Screen-only styling — when viewed in a browser, give the content a
+   readable column width and breathing room around the edges. Print
+   media (PDF rendering) keeps the existing @page margins and ignores
+   these screen rules. */
+@media screen {
+  body {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 32px 24px 64px;
+    background: #fafafa;
+  }
+}
+@media screen and (max-width: 640px) {
+  body { padding: 16px 14px 32px; font-size: 14px; }
+}
 h1 {
   font-size: 22pt;
   color: #9d0f33;
