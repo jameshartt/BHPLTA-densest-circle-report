@@ -1,0 +1,12 @@
+{
+  "center_lat": 50.82567472879176,
+  "center_lon": -0.15648477911952927,
+  "radius_m": 2336.7824045960556,
+  "disc_area_km2": 17.154830067944623,
+  "land_area_km2": 10.903928500193325,
+  "water_area_km2": 0.00837846386331291,
+  "sea_area_km2": 6.242523103887985,
+  "pct_sea": 36.38930306603685,
+  "all_courts_in_circle": 70,
+  "park_courts_in_circle": 37
+}

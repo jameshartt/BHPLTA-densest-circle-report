@@ -1,0 +1,23 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+.ipynb_checkpoints/
+.env
+
+# Cached OSM Overpass extracts (large, regeneratable via Makefile + scripts).
+# Excluding `data/raw/` keeps the repo cloneable; reproducing the pipeline
+# from scratch refetches these (10–20 min, respects Overpass rate limits).
+data/raw/
+data/imagery/
+
+# Claude Code session transcripts (private working notes — not part of
+# the published analysis).
+/2026-*.txt
+
+# Local scratch files for one-off audits
+/tmp_*
+
+# Claude Code session state
+.claude/
