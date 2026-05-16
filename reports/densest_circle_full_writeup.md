@@ -731,47 +731,25 @@ acknowledging that Tokyo's bbox isn't a fair admin scope — is Step 7.
 > of land** beside 6.2 km² of English Channel. That works out at **3.94
 > courts per km² of land** — the highest density of any of the sixteen
 > audited world cities once every city is judged on the same fair
-> denominator. (See the full ranking in the Step 7 table above.)
->
-> **Why this isn't a Brighton-favouring methodology hack.** The
-> "fair denominator" rule that puts Brighton on top — subtract from
-> the disc only what is water (sea + rivers), not what is another
-> city's land — was first flagged as a problem for **Boston** in
-> Step 4 of this analysis, long before any audited Brighton claim
-> depended on it. Step 7 simply applies the same correction
-> consistently to all sixteen cities. Boston's OSM-strict #1 of 3.59
-> drops to 1.08 once Cambridge's land is correctly in the
-> denominator; Paris's audited 4.48 drops to 2.56 for the same
-> reason at the Paris/Val-de-Marne boundary. Brighton's circle has
-> no neighbouring-municipality land to take credit for — its only
-> clip is the southern coastline, removing pure sea. The rule is one
-> rule applied to every city; Brighton wins because Brighton's
-> denominator was never inflated in the first place.
->
-> **Brighton is also the only city in the global top eight with a
-> population under one million.** Brighton's 280,000 sits alone below
-> the seven-figure line; the next-smallest in the Step 7 top eight
-> are Auckland (~1.7M) and Brussels (~1.2M for the Brussels-Capital
-> Region). The top-eight average population is roughly 3.5 million.
-> By the *courts per resident per square kilometre* lens, the contest
-> isn't close.
->
-> Practically: drop a pin on Brunswick Square; you can walk to seven
-> distinct tennis venues — Queens (6 courts), Kingsway on the seafront
-> (6), Hove Park (7), St Ann's Well Gardens (8), Blakers (2), Preston
-> Park (8), Dyke Road (6) — all inside that 25-minute corner-to-corner
-> circle. Almost all are run by Community Interest Companies (CICs)
-> rather than directly by the council, with on-the-day public booking
-> via the operator. No other city audited matches that combination of
-> venue diversity, density and on-the-day public bookability.
+> denominator.
 >
 > **Brighton & Hove holds the densest accessible park-tennis facility
 > in any major city in the world.** That is a claim BHPLTA can
 > defensibly make.
 
+The reasoning behind the headline — why the "fair denominator" rule isn't
+a Brighton-favouring hack (it was first flagged for Boston in Step 4),
+why Brighton's sub-1M population makes the result more striking, and
+how the walkable, CIC-operated, on-the-day-bookable texture of the
+circle differs from anything else in the global top 10 — is covered in
+[Step 7's "Why this rule is defensible"](#why-this-rule-is-defensible-not-just-convenient)
+section above and in [The final word](#the-final-word) below.
+
 ### The final word
 
-The visual below is the audited, ground-truthed, fair-denominator
+![Final top 10 — Step 7 fair-denominator ranking with Brighton at #1](./top10_circle_maps_step7.png)
+
+The visual above is the audited, ground-truthed, fair-denominator
 top 10. Every panel is a 2.34 km circle around its city's densest
 public-park-tennis cluster, with the public-park courts plotted as
 dots (orange rings where the audit recovered municipal courts that
@@ -784,8 +762,9 @@ denominator.
 
 But there's a quality to Brighton's circle that the density number on
 its own can't capture: **it's a genuinely walkable circle**. Every one
-of the seven BHPLTA venues — Queens, Kingsway, Hove Park, St Ann's,
-Blakers, Preston Park, Dyke Road — is **reachable from Brunswick
+of the seven BHPLTA venues — Queens (6 courts), Kingsway on the
+seafront (6), Hove Park (7), St Ann's Well Gardens (8), Blakers (2),
+Preston Park (8), Dyke Road (6) — is **reachable from Brunswick
 Square on foot in 25-30 minutes**, or by a short Brighton & Hove
 Buses hop along the seafront, the Old Steine, London Road or Lewes
 Road corridors. There are **no rivers to cross, no harbours to skirt,
@@ -796,15 +775,16 @@ between one cluster and the next.
 Seven distinct CIC- and operator-managed venues on council parkland,
 no water inside the circle, no major arterial road barriers, all
 served by the same compact bus network, all sitting inside a
-25-minute corner-to-corner walk — that is the lived-experience version
-of "densest park-tennis cluster in the world", and it is what makes
-Brighton & Hove's scene uniquely amateur-friendly. The headline
-density 3.94/km² is the number that puts Brighton at the top of the
-global ranking; the walkable, barrier-free, bus-served *texture* of
-the circle is what puts the scene within reach of any resident or
-visitor who fancies a hit.
-
-![Final top 10 — Step 7 fair-denominator ranking with Brighton at #1](./top10_circle_maps_step7.png)
+25-minute corner-to-corner walk, **all bookable on the day** via the
+operating CIC or community trust rather than through council
+membership lists — that is the lived-experience version of "densest
+park-tennis cluster in the world", and it is what makes Brighton &
+Hove's scene uniquely amateur-friendly. **No other audited city
+matches that combination of venue diversity, density and on-the-day
+public bookability.** The headline density 3.94/km² is the number
+that puts Brighton at the top of the global ranking; the walkable,
+barrier-free, bus-served *texture* of the circle is what puts the
+scene within reach of any resident or visitor who fancies a hit.
 
 ---
 
