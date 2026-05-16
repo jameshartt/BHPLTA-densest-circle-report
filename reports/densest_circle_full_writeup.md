@@ -86,7 +86,7 @@ exactly east-west, so they sit on the circle's diameter; Blakers sits
 safely inside the northern edge) has:
 
 - **Centre**: 50.8257°N, 0.1565°W (around Brunswick / Norfolk Square)
-- **Radius**: **2.34 km** (~25 minutes to walk corner-to-corner)
+- **Radius**: **2.34 km** (~25-30 minutes' walk from the centre to anywhere on the edge)
 - **Disc area**: 17.15 km²
 - **Land area** (after intersecting with the Brighton & Hove unitary-authority polygon): **10.9 km²** — **36% of the disc is English Channel**.
 
@@ -459,8 +459,8 @@ parks-league courts. The arithmetic disfavours it:
   density further.
 
 The current 3-anchor circle captures the dense core: a 2.34 km-radius
-window where each of those parks-league sites sits within a 25-minute
-walk corner to corner. Hollingbury and Saltdean are real, important
+window where each of those parks-league sites sits within a 25-30
+minute walk of the centre at Brunswick Square. Hollingbury and Saltdean are real, important
 parts of Brighton's tennis scene — but geographically they're satellites
 to the dense central cluster.
 
@@ -724,8 +724,8 @@ acknowledging that Tokyo's bbox isn't a fair admin scope — is Step 7.
 > Melbourne, central London, Chicago, Boston, San Francisco and every
 > other audited capital on like-for-like ground.**
 >
-> Draw a 2.34 km circle around Brunswick / Norfolk Square — twenty-five
-> minutes' walk corner to corner — and you get **43 publicly-bookable
+> Draw a 2.34 km circle around Brunswick / Norfolk Square — a 25-30
+> minute walk from the centre to anywhere on the edge — and you get **43 publicly-bookable
 > park-tennis courts** across seven BHPLTA venues (Queens, Kingsway,
 > Hove Park, St Ann's, Blakers, Preston Park, Dyke Road) on **10.9 km²
 > of land** beside 6.2 km² of English Channel. That works out at **3.94
@@ -774,8 +774,8 @@ between one cluster and the next.
 
 Seven distinct CIC- and operator-managed venues on council parkland,
 no water inside the circle, no major arterial road barriers, all
-served by the same compact bus network, all sitting inside a
-25-minute corner-to-corner walk, **all bookable on the day** via the
+served by the same compact bus network, all within a 25-30 minute
+walk of Brunswick Square at the centre, **all bookable on the day** via the
 operating CIC or community trust rather than through council
 membership lists — that is the lived-experience version of "densest
 park-tennis cluster in the world", and it is what makes Brighton &
