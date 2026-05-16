@@ -188,11 +188,11 @@ Common and Battersea Park), in a city of 9.8 million people.
 
 ## Step 3: Sea correction
 
-But Brighton's circle isn't the same shape as London's. London's
-densest 2.34 km circle covers Wandsworth / Battersea and clips a long
-stretch of the Thames (~1.4 km² of water inside the circle). Brighton's
-circle is **36% English Channel** — over a third of the disc is water
-that no court can sit on. Comparing raw park-court counts inflates the
+But Brighton's circle isn't comparable to London's like-for-like.
+London's densest 2.34 km circle covers Wandsworth / Battersea and
+clips a long stretch of the Thames (~1.4 km² of water inside the
+circle). Brighton's circle is **36% English Channel** — over a third
+of the disc is water that no court can sit on. Comparing raw park-court counts inflates the
 denominator for any coastal city. For a fair comparison we should
 divide by the *land* area inside the circle — admin polygon area
 minus inland water (rivers, lakes, docks).
@@ -722,7 +722,7 @@ acknowledging that Tokyo's bbox isn't a fair admin scope — is Step 7.
 > accessible park-tennis courts of any major city in the world.
 > Brighton & Hove beats Paris, Manhattan, the Australian Open's
 > Melbourne, central London, Chicago, Boston, San Francisco and every
-> other audited capital on like-for-like ground.**
+> other audited major city on like-for-like ground.**
 >
 > Draw a 2.34 km circle around Brunswick / Norfolk Square — a 25-30
 > minute walk from the centre to anywhere on the edge — and you get **43 publicly-bookable
@@ -733,7 +733,7 @@ acknowledging that Tokyo's bbox isn't a fair admin scope — is Step 7.
 > audited world cities once every city is judged on the same fair
 > denominator.
 >
-> **Brighton & Hove holds the densest accessible park-tennis facility
+> **Brighton & Hove holds the densest accessible park-tennis cluster
 > in any major city in the world.** That is a claim BHPLTA can
 > defensibly make.
 
