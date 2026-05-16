@@ -896,8 +896,8 @@ The entire analysis is implemented as numbered Python scripts in
   ring-segment members. Net effect: NYC water in disc rose from
   0.22 km² to 3.55 km², Chicago from 0.39 km² to 4.03 km², and
   both fair-denominator densities adjusted accordingly. See
-  `scripts/28_fetch_water.py`, `/tmp/bake_nyc_water.py` and
-  `/tmp/lake_michigan_clip.py` for the synthesis logic.
+  [`scripts/28_fetch_water.py`](https://github.com/jameshartt/BHPLTA-densest-circle-report/blob/main/scripts/28_fetch_water.py)
+  for the synthesis logic.
 - **Polygon-validity repair (now applied at every step).** OSM park
   polygons sometimes have self-intersections that shapely flags as
   invalid; the original Step 2/3 scripts silently dropped those, while
@@ -960,5 +960,7 @@ average is roughly 3.5 million.
 
 ---
 
-*Source: OpenStreetMap contributors • ONS / NRS / NISRA population
-centroids • analysis pipeline at `~/Development/Tennis/tennis-courts-analysis`*
+*Source: [OpenStreetMap contributors](https://www.openstreetmap.org/copyright)
+• ONS / NRS / NISRA population centroids
+• analysis pipeline at
+[github.com/jameshartt/BHPLTA-densest-circle-report](https://github.com/jameshartt/BHPLTA-densest-circle-report)*
