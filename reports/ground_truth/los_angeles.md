@@ -6,6 +6,13 @@
 **Confidence**: high
 **Density implication**: 8 / 17.01 km² = **0.47 per km² LAND**
 
+> **Reviewer note (peer review, July 2026).** The strict-35 breakdown
+> below is built from "~" venue estimates that sum to ~38, not exactly
+> 35; the direction and scale of the −27 correction are unaffected. As
+> the confidence note in this file says, confidence is high on
+> direction, medium on the exact final count (6-10) — the main report's
+> limitations section now carries that qualifier.
+
 ## What the circle actually covers
 
 The centre (34.068, -118.491) sits high on the hillside in **Brentwood**, just east of Mandeville Canyon, just west of Mountaingate Country Club, and immediately north of Brentwood Country Club. The 2.34 km radius reaches:

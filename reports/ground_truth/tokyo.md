@@ -6,6 +6,15 @@
 **Confidence**: medium
 **Density implication**: 70 / 17.14 = 4.08 per km² LAND (upper bound; see scope caveat)
 
+> **Reviewer note (peer review, July 2026).** The high-confidence adds
+> below sum to +54 (→ 72), the headline says "~70", and the high
+> estimate of 79 does not decompose exactly from the itemised bands —
+> treat all three as the ~±10% estimates they are. This audit gives
+> court *counts* only; the two Tokyo-recount densities quoted in the
+> main report divide the same ~25-30 Tokyo-side courts by different
+> denominators (Tokyo-side land ≈ 3.0-3.6; full fair disc ≈ 1.5-1.8),
+> and both are now labelled as such there.
+
 ## OSM-strict breakdown
 
 All 18 sit inside a `leisure=park` polygon and outside any club polygon.

@@ -6,6 +6,12 @@
 **Confidence**: medium-low (web research blocked — see Methodological Note; counts rest on OSM tags + Brussels operator knowledge)
 **Density implication**: 27 / 15.33 = 1.76 per km² LAND
 
+> **Reviewer note (peer review, July 2026).** The "Add" sections below
+> sum to +15 (including +1 Parc des Sources), which would give 28, not
+> the headline 27. The headline treats Parc des Sources as part of the
+> high-estimate 30 band rather than the central count; the main report
+> uses the headline 27.
+
 ## OSM-strict breakdown
 
 The 13 OSM-strict courts cluster into three named public parks. All three are open `leisure=park` polygons and all three are operated by communes or the Brussels-Capital Region; tennis on these municipal park sites is bookable by anyone via the commune / BAT.brussels reservation chain or, for Château Sainte-Anne, free drop-in.

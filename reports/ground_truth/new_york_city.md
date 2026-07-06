@@ -6,6 +6,19 @@
 **Confidence**: medium-high
 **Density implication**: 51 / 16.93 = 3.01 per km² LAND (vs OSM-strict 2.72)
 
+> **Revision note (peer review, July 2026).** The main report originally
+> carried New York at 46→31 (−15), treating the Randalls Island Park
+> Tennis Center as a commercial-academy false inclusion — a correction
+> this audit does not support (see "Remove: None" below; the 15 outdoor
+> Randalls Island courts are NYC Parks courts, season-permit or
+> pay-and-play). The report now adopts this audit: **46→51 (+5
+> Sportime indoor), confidence medium-high**. The 16.93 km² land figure
+> above pre-dates the synthesised river-water correction (Harlem River +
+> East River + Hell Gate + Bronx Kill ≈ 3.55 km², built by buffering OSM
+> waterway centerlines); with it, land is 13.60 km² and the densities
+> become **51 / 13.60 = 3.75** ground-truth and 46 / 13.61 = 3.38
+> OSM-strict — the figures the report's Step 6 and Step 7 tables use.
+
 ## OSM-strict breakdown
 
 | Venue | OSM courts | Operator | NYC permit / free / pay |

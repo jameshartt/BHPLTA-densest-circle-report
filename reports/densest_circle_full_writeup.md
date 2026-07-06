@@ -29,8 +29,9 @@ and Paris (both have densest circles centred on their admin
 boundary), and re-ranks under a **fair-denominator rule** — disc minus
 water only, not minus other cities' land. Under that rule, **Brighton
 & Hove sits at #1 in the world**, at 3.94 public-park courts per km²
-of land, ahead of Chicago (3.28), Melbourne (3.07), Greater London (2.89), Paris
-(2.56), Boston (1.08) and every other audited major city. Brighton is
+of land, ahead of New York (3.75), Chicago (3.28), Melbourne (3.07),
+Greater London (2.89), Paris (2.56), Boston (1.08) and every other
+audited major city. Brighton is
 also the only city in the global top eight with a population under one
 million.
 
@@ -230,7 +231,7 @@ see Methodology).
 |---|---|---|---|---|
 | Brighton & Hove (user circle) | 17.2 | **10.9** | 36% (Channel) | Density bumps from 2.2 → **3.4 park courts/km² land** |
 | New York City | 17.2 | 11.3 | 34% (rivers) | Manhattan: Hudson + East River excluded |
-| Amsterdam | 17.2 | 9.9 | 42% | Canals + IJ |
+| Amsterdam | 17.2 | 13.2 | 23% | Canals + IJ |
 | Paris | 17.2 | 12.0 | 30% | Seine excluded |
 | Greater London (Battersea, Step 4) | 17.2 | 15.2 | 11% | Thames + park lakes |
 | San Francisco | 17.2 | 17.2 | 0% | Densest circle inland — no correction needed |
@@ -255,7 +256,8 @@ see Methodology).
 | 12 | Tokyo (23 wards)* | 33 | 15.4 | 2.15 |
 | 13 | Melbourne* | 35 | 16.3 | 2.15 |
 | 14 | Los Angeles | 35 | 17.0 | 2.06 |
-| 15 | Sydney* | 27 | 16.9 | 1.60 |
+| 15 | Lisbon | 19 | 11.7 | 1.63 |
+| 16 | Sydney* | 27 | 16.9 | 1.60 |
 | ... | ... | ... | ... | ... |
 
 *\* indicates cities whose densest circle could not be sea-corrected because
@@ -300,18 +302,18 @@ and re-ran the densest-circle.
 |---|---|---|---|---|---|
 | 1 | Boston | 18 | 5.0 | **3.59** | All 18 courts sit in one cluster at the Charles River Reservation in Allston, on the Boston/Cambridge boundary — so 70% of the disc (~12 km²) extends into Cambridge / Watertown / Brookline and is clipped off, leaving a tiny 5 km² Boston-only denominator |
 | **2** | **Brighton & Hove** (user circle) | **37** | **10.9** | **3.39** | |
-| 3 | Greater London | 44 | 15.2 | 2.89 | Battersea Park (19 courts) + Kennington / Vauxhall / Burgess Park cluster — Step 3's densest centre was a Wandsworth cluster, but once sports-centre / club polygons are excluded the south-Lambeth Battersea cluster overtakes it |
-| 4 | New York City | 46 | 13.6 | 3.38 | dropped from 53 once Central Park sports-centre polygons excluded; land now properly subtracts the Harlem & East Rivers (synthesised from waterway centerlines — see Methodology note on OSM tidal-water mapping) |
+| 3 | New York City | 46 | 13.6 | 3.38 | dropped from 53 once Central Park sports-centre polygons excluded; land now properly subtracts the Harlem & East Rivers (synthesised from waterway centerlines — see Methodology note on OSM tidal-water mapping) |
+| 4 | Greater London | 44 | 15.2 | 2.89 | Battersea Park (19 courts) + Kennington / Vauxhall / Burgess Park cluster — Step 3's densest centre was a Wandsworth cluster, but once sports-centre / club polygons are excluded the south-Lambeth Battersea cluster overtakes it |
 | 5 | Paris | 27 | 9.6 | 2.81 | dropped from 70 once Roland Garros et al. excluded |
 | 6 | Chicago | 35 | 13.2 | 2.66 | |
 | 7 | Auckland* | 40 | 17.2 | 2.33 | |
 | 8 | Los Angeles | 35 | 17.0 | 2.06 | |
-| 9 | Toronto | 32 | 17.1 | 1.87 | dropped from 35 |
+| 9 | Toronto | 32 | 17.1 | 1.87 | dropped from 43 |
 | 10 | Sydney* | 27 | 16.9 | 1.60 | |
 | 11 | Melbourne* | 26 | 16.3 | 1.59 | |
-| 12 | Rome | 26 | 17.1 | 1.52 | dropped from 40 |
+| 12 | Rome | 26 | 17.1 | 1.52 | dropped from 42 |
 | 13 | Buenos Aires | 13 | 11.0 | 1.18 | |
-| 14 | San Francisco | 20 | 17.1 | 1.17 | dropped from 45 — many Pacific Heights / Marina clubs excluded |
+| 14 | San Francisco | 20 | 17.1 | 1.17 | dropped from 50 — many Pacific Heights / Marina clubs excluded |
 | 15 | Tokyo (23 wards)* | 18 | 17.1 | 1.05 | dropped from 33 |
 | 16 | Brussels | 13 | 15.3 | 0.85 | |
 | ... | (rest) | | | < 0.8 | including Madrid 0.35, Amsterdam 0.16 (dropped from 53 once Amstelpark / Beatrixpark members' clubs excluded) |
@@ -347,17 +349,18 @@ denominator, Brighton (37 / 17.2 = **2.16**) beats Boston (18 / 17.2
 = **1.05**) by more than two-to-one. Boston's nominal OSM-strict #1
 is therefore a denominator artefact; once the ground-truth audit (Step
 6) gives every city a like-for-like comparison, Boston settles at
-**#4** (3.59, unchanged because the audit didn't add or remove any
+**#5** (3.59, unchanged because the audit didn't add or remove any
 Boston courts).
 
 ### Interim Brighton headline (OSM-strict, pre-audit)
 
 Strictly on Step-4 numbers, Brighton sits at **#2 of the audited
-top-16 world cities, behind only Boston's truncation artefact** — and
-ahead of London, Chicago, Paris, Auckland, NYC, LA, Toronto, Sydney,
-Melbourne, Rome, Buenos Aires, San Francisco, Tokyo and Brussels at
-this stage. The BHPLTA ground-truth correction lifts Brighton further
-to **3.94 / km²** (Step 5). The full audited picture comes in Step 6.
+top-16 world cities, behind only Boston's truncation artefact** — a
+hair's breadth ahead of New York (3.39 vs 3.38), and ahead of London,
+Paris, Chicago, Auckland, LA, Toronto, Sydney, Melbourne, Rome, Buenos
+Aires, San Francisco, Tokyo and Brussels at this stage. The BHPLTA
+ground-truth correction lifts Brighton further to **3.94 / km²**
+(Step 5). The full audited picture comes in Step 6.
 
 ### The top 10 at a glance
 
@@ -490,8 +493,8 @@ adds, removes and a confidence rating. The 15 raw audits live at
 
 | Bias | Pattern | Affected cities |
 |---|---|---|
-| **False exclusion** — sports_centre shells nesting inside park polygons | Municipal facilities tagged `leisure=sports_centre` are filtered out as "clubs" even when they're publicly bookable by anyone. Same pattern that Brighton hit with Hove Beach Park. | Paris **+16** (Centre sportif Léo Lagrange, bookable via tennis.paris.fr), Melbourne **+24** (Melbourne Park National Tennis Centre, Pay-&-Play via Tennis Australia), Brussels **+14** (ADEPS Forêt de Soignes + Parc des Trois Tilleuls), San Francisco **+9** (McCoppin Square, Parkside, Balboa), Chicago **+8** (Washington Park polygon trimmed at MLK Drive) |
-| **False inclusion** — private clubs / commercial academies leasing space inside park polygons | Members-only clubs or commercial academies operate on city-owned park land or inside federal protected areas, and the OSM polygon doesn't subdivide concessions. | Los Angeles **−27** (Santa Monica Mountains NRA federal overlay catches Mountaingate CC, Brentwood CC, Brentwood School + luxury home courts), Rome **−24** (FIT-affiliated circoli inside Valle dei Casali nature reserve), New York City **−15** (Randalls Island Park Tennis Center is the Sportime / John McEnroe Tennis Academy on NYC Parks land — commercial academy, not on-the-day public-park), Toronto **−13** (community tennis clubs on park land that require club membership), Buenos Aires **−7** (Club Comunicaciones inside Parque Sarmiento) |
+| **False exclusion** — sports_centre shells nesting inside park polygons | Municipal facilities tagged `leisure=sports_centre` are filtered out as "clubs" even when they're publicly bookable by anyone. Same pattern that Brighton hit with Hove Beach Park. | Paris **+16** (Centre sportif Léo Lagrange, bookable via tennis.paris.fr), Melbourne **+24** (Melbourne Park National Tennis Centre, Pay-&-Play via Tennis Australia), Brussels **+14** (ADEPS Forêt de Soignes + Parc des Trois Tilleuls), San Francisco **+9 gross** (McCoppin Square, Parkside, Balboa; +7 net after the Terrace Green removal below), Chicago **+8** (Washington Park polygon trimmed at MLK Drive), New York City **+5** (Sportime's indoor courts at Randalls Island — `leisure=sports_centre` on NYC Parks land, bookable online by any member of the public, same operator model as Prospect Park Tennis Center) |
+| **False inclusion** — private clubs / commercial academies leasing space inside park polygons | Members-only clubs or commercial academies operate on city-owned park land or inside federal protected areas, and the OSM polygon doesn't subdivide concessions. | Los Angeles **−27** (Santa Monica Mountains NRA federal overlay catches Mountaingate CC, Brentwood CC, Brentwood School + luxury home courts), Rome **−24** (FIT-affiliated circoli inside Valle dei Casali nature reserve), Toronto **−13** (community tennis clubs on park land that require club membership), Buenos Aires **−7** (Club Comunicaciones inside Parque Sarmiento), San Francisco **−2** (Terrace Green Park — a St. Francis Wood HOA court, private in practice). Notably, New York had **no false inclusions**: the audit verified every strict court — including the 15 outdoor Randalls Island courts — as NYC Parks public-permit or pay-and-play. |
 
 Two cities had **OSM polygon-coverage gaps** that needed Brighton-style
 manual adds: **Tokyo** (~52 tennis pitches sit immediately adjacent to
@@ -506,28 +509,42 @@ gap as Brighton's Hove Beach Park, only ×10) and **Brighton** itself
 | **1** | **Paris** | 27 | **43** | +16 | **4.48** | medium |
 | **2** | **Tokyo (23 wards)** | 18 | **~70** | +52 | **4.08*** | medium |
 | **3** | **Brighton & Hove** | 37 | **43** | +6 | **3.94** | high |
-| 4 | Boston | 18 | 18 | 0 | 3.59† | medium |
-| 5 | Chicago | 35 | 43 | +8 | 3.28 | medium |
-| 6 | Melbourne | 26 | 50 | +24 | 3.07 | medium |
-| 7 | Greater London | 44 | 44 | 0 | 2.89 | medium-high |
-| 8 | Auckland | 40 | 40 | 0 | 2.33 | medium |
-| 9 | New York City | 46 | 31 | −15 | 2.28 | medium |
+| 4 | New York City | 46 | 51 | +5 | 3.75 | medium-high |
+| 5 | Boston | 18 | 18 | 0 | 3.59† | medium |
+| 6 | Chicago | 35 | 43 | +8 | 3.27 | medium |
+| 7 | Melbourne | 26 | 50 | +24 | 3.07 | medium |
+| 8 | Greater London | 44 | 44 | 0 | 2.89 | medium-high |
+| 9 | Auckland | 40 | 40 | 0 | 2.33 | medium |
 | 10 | Brussels | 13 | 27 | +14 | 1.76 | medium-low |
 | 11 | Sydney | 27 | 27 | 0 | 1.60 | medium-low |
-| 12 | San Francisco | 20 | 27 | +7 | 1.58 | medium |
+| 12 | San Francisco | 20 | 27 | +7 | 1.58 | medium-high |
 | 13 | Toronto | 32 | 19 | −13 | 1.11 | medium |
 | 14 | Buenos Aires | 13 | 6 | −7 | 0.54 | low-medium |
 | 15 | Los Angeles | 35 | 8 | −27 | 0.47 | high |
 | 16 | Rome | 26 | 2 | −24 | 0.12 | medium-high |
 
+*(An earlier draft of this table carried New York at 46→31 (−15),
+treating the Randalls Island Park Tennis Center as a commercial-academy
+false inclusion. The per-city audit at `reports/ground_truth/new_york_city.md`
+found the opposite — the 15 outdoor Randalls Island courts are NYC Parks
+courts, bookable by season permit or pay-and-play, and the audit's only
+correction is **+5** for Sportime's publicly-bookable indoor courts. This
+revision adopts the audit. Chicago's density is printed as 3.27 here —
+43 courts over the 13.16 km² admin-clip denominator; Step 7's 3.28 uses
+the slightly smaller fair-denominator land of 13.12 km².)*
+
 *\* Tokyo's 4.08 uses the geographic-disc scope (~17 km²). The Tokyo
-admin scope is bbox-only, and ~45 of the 70 audited courts are in
+admin scope is bbox-only, and ~40-45 of the ~70 audited courts are in
 Saitama prefecture (Wako, Asaka, Niiza) inside the geographic disc but
 outside the Tokyo-23-wards admin polygon. On a strict Tokyo-only
-recount, Tokyo's count drops to ~25-30 and density to **1.5–1.8**,
-slotting in around #10. Brighton's robustness to this admin-scope
-question — its admin polygon is essentially the city — is part of
-what makes its position defensible.*
+recount (~25-30 courts), the density depends on which denominator you
+hold it against: on the **Tokyo-side land only** — the admin-clip
+treatment every other city in this table gets — it is roughly
+**3.0-3.6**, below Brighton on the central estimate; on the full
+fair-denominator disc of Step 7 it is **~1.5-1.8**, slotting in around
+#10. Brighton's robustness to this admin-scope question — its admin
+polygon is essentially the city — is part of what makes its position
+defensible.*
 
 *† Boston's 3.59 remains a truncation artefact: 18 real public courts
 at the Charles River Reservation in Allston, divided by the small
@@ -539,10 +556,11 @@ is in Cambridge / Watertown / Brookline). On the disc-area metric
 
 > **Under the admin-clip denominator used in Step 6, Brighton sits at
 > rank 3 of 16 audited world cities** at 3.94 courts per km² of land —
-> behind Paris (4.48) and Tokyo's bbox-scope (4.08). Brighton is the
-> only city in the top 8 with a population under 1 million (Brighton
-> is ~280k; Paris is 2.1M, Tokyo 9.7M, Chicago 2.7M, Melbourne 5.1M,
-> NYC 8.4M, London 9.8M).
+> behind Paris (4.48) and Tokyo's bbox-scope (4.08). Brighton (~280k)
+> is by far the smallest city in the top 8; the only other one under
+> 1 million is Boston (~675k), whose 3.59 is the truncation artefact
+> flagged since Step 4 (Paris is 2.1M, Tokyo 9.7M, NYC 8.4M, Chicago
+> 2.7M, Melbourne 5.1M, London 9.8M).
 >
 > **Step 7 below** examines the admin-clip rule itself, finds it
 > systematically transfers neighbouring-municipality LAND credit to
@@ -641,11 +659,19 @@ error as comparing London-9.8M-population against Brighton-280k-only
 and calling Brighton the dense one — different denominators, different
 scopes, not a like-for-like comparison.
 
-A Tokyo-23-wards-only recount gives **~27 courts** (audit estimate);
-restricting to the Tokyo-side land inside the 2.34 km disc gives a
-density of roughly **3.0-3.6 / km²** — competitive with Brighton but
-below it on the central estimate, and entirely uncertain without a
-proper admin polygon.
+A Tokyo-23-wards-only recount gives **~25-30 courts** (audit
+estimate). On the Tokyo-side land inside the 2.34 km disc — the
+admin-clip treatment — that is roughly **3.0-3.6 / km²**, below
+Brighton on the central estimate and entirely uncertain without a
+proper admin polygon. Under this step's own fair rule (whole disc
+minus water) it is **~1.5-1.8 / km²**, around #10. And the steel-man
+deserves stating plainly: taken as a raw geographic cluster with no
+regard to municipality, the bbox disc's ~70 courts over ~17.1 km² of
+land is 4.08 / km² — nominally denser than Brighton. But the claim
+under test is about a cluster *within a major city*: that disc
+straddles Tokyo and three separate Saitama commuter cities (its
+courts are split roughly 25-30 / 40-45 between the two sides), and
+no single-municipality reading of it reaches Brighton's 3.94.
 
 ### Fair-denominator ranking
 
@@ -655,30 +681,37 @@ consistent single-municipality scope (Tokyo restricted or asterisked):
 | # | City | Audit count | Disc water (sea+inland) | Fair land | **Fair density** | Notes |
 |---|---|---:|---:|---:|---:|---|
 | **1** | **Brighton & Hove** | **43** | 6.24 | **10.91** | **3.94** | only clip is sea — no land transferred to other cities |
-| 2 | Chicago | 43 | 4.03 | 13.12 | 3.28 | Lake Michigan (relation 1205149) takes ~3.6 km² off the eastern half of the Hyde Park / Jackson Park disc |
-| 3 | Melbourne (AU) | 50 | 0.84 | 16.31 | 3.07 | |
-| 4 | Greater London | 44 | 1.92 | 15.24 | 2.89 | |
-| 5 | Paris | 43 | 0.38 | 16.78 | 2.56 | drops from rank 1 (4.48 admin-clip) because Val-de-Marne LAND is now correctly in the denominator |
-| 6 | Auckland | 40 | 0.00 | 17.15 | 2.33 | |
-| 7 | New York City | 31 | 3.55 | 13.61 | 2.28 | drops on two corrections: (a) 15 Randalls Island courts are the Sportime / John McEnroe Tennis Academy on parks land (commercial academy, not on-the-day public), and (b) the Harlem River + East River + Hell Gate + Bronx Kill have no OSM `natural=water` polygons — only centerlines tagged `waterway=tidal_channel` — so the polygons were synthesised by buffering those centerlines to half river-width |
+| 2 | New York City | 51 | 3.55 | 13.60 | 3.75 | the audit's only correction is **+5** (Sportime's publicly-bookable indoor courts at Randalls Island) — it verified all 46 strict courts, including the 15 outdoor Randalls Island courts, as NYC Parks public-permit or pay-and-play. The Harlem River + East River + Hell Gate + Bronx Kill have no OSM `natural=water` polygons — only centerlines tagged `waterway=tidal_channel` — so the water was synthesised by buffering those centerlines to half river-width |
+| 3 | Chicago | 43 | 4.03 | 13.12 | 3.28 | Lake Michigan (relation 1205149) takes ~3.6 km² off the eastern half of the Hyde Park / Jackson Park disc |
+| 4 | Melbourne (AU) | 50 | 0.84 | 16.31 | 3.07 | |
+| 5 | Greater London | 44 | 1.92 | 15.23 | 2.89 | |
+| 6 | Paris | 43 | 0.38 | 16.77 | 2.56 | drops from rank 1 (4.48 admin-clip) because Val-de-Marne LAND is now correctly in the denominator. The audit also flags ~6-10 *known* courts in Vincennes / Saint-Mandé inside the disc; the fair rule counts known cross-boundary courts in the numerator, which would lift Paris to ~2.9-3.2 — still below Brighton |
+| 7 | Auckland | 40 | 0.00 | 17.15 | 2.33 | |
 | 8 | Brussels | 27 | 0.36 | 16.79 | 1.61 | |
 | 9 | Sydney | 27 | 0.27 | 16.88 | 1.60 | |
 | 10 | San Francisco | 27 | 0.06 | 17.09 | 1.58 | |
 | 11 | Toronto | 19 | 0.05 | 17.10 | 1.11 | |
-| 12 | Boston | 18 | 0.47 | 16.68 | 1.08 | collapses from #4 (3.59 admin-clip) because the 18 Daly Field courts are surrounded by Cambridge / Watertown / Brookline LAND that's now correctly in the denominator |
+| 12 | Boston | 18 | 0.47 | 16.68 | 1.08 | collapses from Step 6's #5 (3.59 admin-clip) because the 18 Charles River Reservation courts at Daly Field (Allston) are surrounded by Cambridge / Watertown / Brookline LAND that's now correctly in the denominator |
 | 13 | Los Angeles | 8 | 0.00 | 17.15 | 0.47 | |
-| 14 | Buenos Aires | 6 | 0.01 | 17.15 | 0.35 | |
-| 15 | Rome | 2 | 0.02 | 17.14 | 0.12 | |
-| — | Tokyo (23 wards) | ~27 strict / 70 bbox | 0.01 | n/a | 3.0-3.6 strict / 4.08 bbox* | bbox scope spans Tokyo + Saitama; no like-for-like admin polygon |
+| 14 | Buenos Aires | 6 | 0.01 | 17.14 | 0.35 | |
+| 15 | Rome | 2 | 0.02 | 17.13 | 0.12 | |
+| — | Tokyo (23 wards) | ~25-30 strict / ~70 bbox | 0.01 | 17.14 | ~1.5-1.8 strict / 4.08 bbox* | bbox scope spans Tokyo + Saitama; no like-for-like admin polygon — see Bias 2 above |
+
+*(Fair land is disc (17.15 km²) minus disc water, computed with one
+formula for every city; the canonical figures live in
+`data/processed/ground_truth.csv`.)*
 
 **Brighton sits at #1 in the world** on this fairer measure. Boston's
-nominal #1 in Step 4 (OSM-strict) and #4 in Step 6 (ground-truth,
+nominal #1 in Step 4 (OSM-strict) and #5 in Step 6 (ground-truth,
 admin-clip) collapses to #12 once its denominator stops getting free
-credit for Cambridge's land. Paris falls from Step 6's #1 to #5 in
+credit for Cambridge's land. Paris falls from Step 6's #1 to #6 in
 Step 7 for the same reason. The cities that genuinely sit close to
-Brighton on density — Chicago, Melbourne, London, Paris — all have
-their densest cluster squarely inside their own admin scope, not on
-its edge, and all sit within ~1.4 of Brighton at 3.28–2.56.
+Brighton on density — New York, Chicago, Melbourne, London, Paris —
+all have their densest cluster squarely inside their own admin scope,
+not on its edge, and all sit within ~1.4 of Brighton at 3.75–2.56.
+New York is the nearest challenger at 3.75, within 5% of Brighton —
+and it earns that position honestly, with a South Bronx cluster whose
+only denominator correction is real river water.
 
 ### Why this rule is defensible (not just convenient)
 
@@ -715,12 +748,12 @@ Both rankings are honest under their respective methodology choices.
 The fairer one — applied consistently to all 16 cities, including
 acknowledging that Tokyo's bbox isn't a fair admin scope — is Step 7.
 
-### The headline — *Brighton beats Manhattan, Paris and Melbourne for the world's densest cluster of accessible public tennis*
+### The headline — *Brighton beats New York, Paris and Melbourne for the world's densest cluster of accessible public tennis*
 
 > **A coastal city of 280,000 — with a third of its central circle
 > sitting in the English Channel — has the densest cluster of public,
 > accessible park-tennis courts of any major city in the world.
-> Brighton & Hove beats Paris, Manhattan, the Australian Open's
+> Brighton & Hove beats New York, Paris, the Australian Open's
 > Melbourne, central London, Chicago, Boston, San Francisco and every
 > other audited major city on like-for-like ground.**
 >
@@ -731,7 +764,7 @@ acknowledging that Tokyo's bbox isn't a fair admin scope — is Step 7.
 > of land** beside 6.2 km² of English Channel. That works out at **3.94
 > courts per km² of land** — the highest density of any of the sixteen
 > audited world cities once every city is judged on the same fair
-> denominator.
+> denominator. New York's South Bronx cluster runs closest, at 3.75.
 >
 > **Brighton & Hove holds the densest accessible park-tennis cluster
 > in any major city in the world.** That is a claim BHPLTA can
@@ -810,6 +843,7 @@ The entire analysis is implemented as numbered Python scripts in
 12. `23_fetch_clubs.py` + `24_park_filter_v2.py` + `25_densest_final.py` → club-inside-park exclusion
 13. `28_fetch_water.py` → OSM `natural=water` polygons for proper inland-water subtraction (Thames, Harlem River, Seine, etc.)
 14. **Step 6 audit**: 15 independent research agents, one per top-16 city, cross-checking the OSM-strict count against the local parks-and-recreation authority. Outputs in `reports/ground_truth/*.md` and consolidated above. Brighton's audit was done first by the author (BHPLTA-confirmed venue-by-venue).
+15. **`data/processed/ground_truth.csv`** consolidates the audited counts, confidences and Step 6/Step 7 denominators into one canonical file; the rendering scripts (`22_densest_report_v2.py`, `26_top10_circle_maps.py`) read this file rather than carrying their own copies of the numbers.
 
 ### Data sources
 
@@ -842,16 +876,18 @@ The entire analysis is implemented as numbered Python scripts in
   publicly-bookable tennis would be excluded by our `leisure=sports_centre`
   filter. Brighton's Kingsway / Hove Beach Club isn't tagged this way in
   OSM, so its courts are correctly *not* excluded.
-- **Boston anomaly.** Boston's densest 18-court cluster (all in the
-  Charles River Reservation in Allston) sits right on the Boston /
-  Cambridge boundary, so the 2.34 km circle drawn around it has 69%
-  of its area outside Boston city limits — in Cambridge, Watertown,
-  and Brookline. The strict "land within Boston admin polygon"
-  calculation therefore gives Boston a tiny 5.01 km² denominator and
-  an inflated 3.59 / km² figure (the Charles itself only removes
-  another 0.27 km² of water; the dominant truncation is the city
-  limit). Using disc area for every city (17.2 km² each), Brighton
-  (2.16) cleanly beats Boston (1.05).
+- **Boston anomaly.** Boston's densest 18-court cluster (all at Daly
+  Field in the Charles River Reservation, Allston) sits right on the
+  Boston / Cambridge boundary, so the 2.34 km circle drawn around it
+  has 69% of its area outside Boston city limits — in Cambridge,
+  Watertown, and Brookline. The strict "land within Boston admin
+  polygon" calculation therefore gives Boston a tiny 5.01 km²
+  denominator and an inflated 3.59 / km² figure (the Charles itself
+  only removes another ~0.27 km² of water *within the Boston clip*;
+  measured across the whole disc the water is 0.47 km², which is the
+  figure Step 7's fair denominator subtracts — the dominant truncation
+  either way is the city limit). Using disc area for every city
+  (17.2 km² each), Brighton (2.16) cleanly beats Boston (1.05).
 - **Inland-water subtraction.** The land area is now `circle ∩ admin
   polygon − OSM water polygons`, so rivers and docks inside the admin
   polygon (Thames, Charles, Seine, IJ canal, etc.) are excluded.
@@ -897,29 +933,84 @@ The entire analysis is implemented as numbered Python scripts in
   shells nesting inside park polygons cause **false exclusions** —
   municipal facilities like Tennis Paris's Centre sportif Léo Lagrange,
   Melbourne Park's Pay-&-Play outdoor courts, Brussels's ADEPS Forêt de
-  Soignes complex, and several SFRPD venues are filtered out as "clubs"
-  even though they're publicly bookable on the day. Net effect: Paris
-  +16, Melbourne +24, Brussels +14, SF +9. (2) Private clubs leasing
-  space inside park / nature-reserve polygons cause **false inclusions**
-  — most dramatically in LA (Santa Monica Mountains NRA polygon
-  catches Mountaingate CC, Brentwood CC, Brentwood School and luxury
-  residential courts: −27), Rome (FIT-affiliated circoli inside Valle
-  dei Casali nature reserve: −24), Toronto (community tennis clubs on
-  park land that require membership: −13) and Buenos Aires (Club
-  Comunicaciones inside Parque Sarmiento: −7). Step 6 quantifies all
-  16 per-city corrections.
+  Soignes complex, several SFRPD venues, and Sportime's
+  publicly-bookable indoor courts at Randalls Island are filtered out
+  as "clubs" even though they're publicly bookable on the day. Effect:
+  Paris +16, Melbourne +24, Brussels +14, SF +9 gross, NYC +5.
+  (2) Private clubs leasing space inside park / nature-reserve polygons
+  cause **false inclusions** — most dramatically in LA (Santa Monica
+  Mountains NRA polygon catches Mountaingate CC, Brentwood CC,
+  Brentwood School and luxury residential courts: −27), Rome
+  (FIT-affiliated circoli inside Valle dei Casali nature reserve: −24),
+  Toronto (community tennis clubs on park land that require
+  membership: −13), Buenos Aires (Club Comunicaciones inside Parque
+  Sarmiento: −7) and San Francisco (Terrace Green Park's HOA court:
+  −2, making SF's net correction +7). New York, notably, had no false
+  inclusions — the audit verified every strict court, including the
+  15 outdoor Randalls Island courts, as NYC Parks public-permit or
+  pay-and-play. Step 6 quantifies all 16 per-city corrections.
+- **Audit corrections carry their own uncertainty.** Chicago's +8 has
+  a double-counting risk the audit itself flags: Washington Park's 17
+  OSM pitches may map a real ~10-court facility twice, giving a
+  defensible ground-truth range of 36-43 (the tables use 43). Rome's
+  OSM-strict 26 could not be exactly reproduced from the cached data
+  during the audit (re-runs give 3-30 depending on which park-like
+  tags are included), though the ground-truth 2 (range 0-4) is robust
+  to this. Toronto's −13 removes community clubs on park land that
+  require membership; under the most generous reading — any
+  council-owned park venue counts, the standard Brighton's Kingsway
+  benefits from — Toronto would be 22-25 courts (1.29-1.46 / km²),
+  still #11. And LA's "high" confidence is high on direction, medium
+  on the exact count (6-10).
+- **Madrid and Amsterdam were not audited.** The Step 6 audit covered
+  the Step 4 top-16 only. Madrid (0.35) and Amsterdam (0.16) sit far
+  below the lowest audited density band — even a Melbourne-sized +24
+  correction would not lift either into the top eight — but their
+  numbers in Step 4 remain OSM-strict.
 - **Cross-boundary scope effects.** Three cities have densest circles
   that straddle their admin scope: Paris (parts of Vincennes/Saint-Mandé
-  in Val-de-Marne 94 — not in our 75-scoped query, possibly +6–10
-  additional courts), Boston (~70% of the disc in Cambridge / Watertown
-  / Brookline — but no known additional Cambridge-side park-tennis
-  inside the disc anyway), Tokyo (~45 of ~70 audited courts are in
-  Saitama prefecture, not Tokyo 23 wards). Brighton's admin polygon is
-  essentially the city, so it has no equivalent scope ambiguity.
+  in Val-de-Marne 94 — not in our 75-scoped query, ~6–10 known
+  additional courts; the Step 7 table carries this as a sensitivity,
+  Paris ~2.9-3.2 with them counted), Boston (~70% of the disc in
+  Cambridge / Watertown / Brookline — but no known additional
+  Cambridge-side park-tennis inside the disc anyway), Tokyo (~40-45 of
+  ~70 audited courts are in Saitama prefecture, not Tokyo 23 wards).
+  Brighton's admin polygon is essentially the city, so it has no
+  equivalent scope ambiguity.
+- **The densest-circle search is a heuristic — and one-sidedly
+  conservative for Brighton's competitors.** Candidate circle centres
+  are the court locations themselves; the true 2.34 km-radius
+  maximum-coverage circle can centre *between* courts (two courts up
+  to 4.7 km apart can share a disc), so every comparison city's
+  "densest circle" count is a lower bound on its true maximum.
+  Brighton, by contrast, is scored on the hand-placed user circle,
+  whose centre is not a court. A denser, off-court-centred circle
+  could in principle exist in any comparison city; this is the
+  analysis's main unquantified risk, and correcting it could only
+  ever *weaken* Brighton's relative position, never strengthen it.
+- **Court counting is one-OSM-pitch-one-court.** The `tennis:courts=N`
+  tag is fetched but not applied, and no node/way deduplication is
+  attempted. Cities where mappers draw a single polygon around a
+  multi-court block are undercounted in the OSM-strict numbers —
+  Tokyo's +52 audit correction is largely this effect plus park-polygon
+  gaps. The ground-truth audits are the corrective.
+- **Radius drift across early steps.** Step 3's global counts were
+  computed at r = 2342 m and their land areas at r = 2337 m (a ~0.4%
+  area mismatch confined to the Step 3 table). All Step 4-7 numbers
+  use a single radius, r = 2336.78 m — the smallest enclosing circle
+  of the Brighton anchors, disc 17.15 km².
+- **Polygon holes are ignored.** Inner rings of park / water
+  multipolygons are not subtracted: a court in a park's interior
+  courtyard still counts as in-park, and islands inside river
+  relations count as water (slightly overstating the water correction
+  for river cities). Both effects are small at 2.34 km scale but not
+  zero.
 - **Confidence varies per city.** The Brighton audit is high
   confidence (BHPLTA-confirmed, venue-by-venue, locally verified). The
-  global audits are single-agent one-shot web research and most are
-  medium or medium-low confidence; the dominant uncertainty is
+  global audits are single-agent one-shot web research, mostly at
+  medium confidence (New York, London, San Francisco and Rome reach
+  medium-high; Buenos Aires, Brussels and Sydney sit lower); the
+  dominant uncertainty is
   whether OSM tagging of a given facility correctly reflects its
   current public-bookable status. See per-city reports for source
   links.
@@ -930,13 +1021,13 @@ The metric speaks to community vibrancy: how many distinct, accessible
 tennis playing surfaces a typical resident has within walking distance.
 For a city of 280k people with 36% of its central circle in the
 English Channel, sitting **#1 in the world** on a fair-denominator
-basis — ahead of Chicago, Melbourne, London, Paris, Auckland, NYC,
-Brussels, Sydney, SF, Toronto, Boston, LA, Buenos Aires and Rome —
-is a striking testament to Brighton & Hove's parks-and-courts
-culture. Brighton is the only city in the global top eight with a
-population under a million; Auckland (~1.7M) and Brussels (~1.2M
-Brussels-Capital Region) are the next-smallest, and the top-eight
-average is roughly 3.5 million.
+basis — ahead of New York, Chicago, Melbourne, London, Paris,
+Auckland, Brussels, Sydney, San Francisco, Toronto, Boston, Los
+Angeles, Buenos Aires and Rome — is a striking testament to Brighton
+& Hove's parks-and-courts culture. Brighton is the only city in the
+global top eight with a population under a million; Brussels (~1.2M
+Brussels-Capital Region) and Auckland (~1.7M) are the next-smallest,
+and the top-eight average is roughly 4 million.
 
 ---
 

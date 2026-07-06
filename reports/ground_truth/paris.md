@@ -6,6 +6,15 @@
 **Confidence**: medium
 **Density implication**: 43 / 9.60 = 4.48 per km^2 LAND
 
+> **Reviewer note (peer review, July 2026).** The itemised additions
+> below sum to +19 (+16 Léo Lagrange, +1 Alain Mimoun, +2 rue du Sahel),
+> which would give 46, not the headline 43. The main report carries the
+> conservative headline figure (43 = 27 + 16 Léo Lagrange, the
+> high-confidence add) and treats the +3 balance as part of the
+> high-estimate 47 band. The ~6-10 known Vincennes / Saint-Mandé courts
+> outside the 75-scope are carried in the report's Step 7 table as a
+> sensitivity (Paris ~2.9-3.2 with them counted).
+
 ## OSM-strict breakdown
 
 The 27 OSM-strict courts cluster into two named public Tennis Paris facilities, both sitting inside the `leisure=park` polygon for **Bois de Vincennes** (12e arr., Ville de Paris). Both are bookable on the day by the public via tennis.paris.fr / Paris municipal booking.

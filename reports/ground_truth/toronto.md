@@ -2,9 +2,15 @@
 
 **Step-4 densest 2.34 km circle centre**: 43.76376, -79.32090 (North York — Don Mills / Parkwoods / Henry Farm)
 **OSM-strict count**: 32 public-park courts
-**Ground-truth count**: 18 (likely 18-22 depending on interpretation of community-club courts)
+**Ground-truth count**: 19 (likely 19-22 depending on interpretation of community-club courts)
 **Confidence**: medium
-**Density implication**: 18/17.10 = 1.05 per km² LAND (range 1.05-1.29)
+**Density implication**: 19/17.10 = 1.11 per km² LAND (range 1.11-1.29)
+
+> **Revision note (peer review, July 2026).** The header originally said
+> 18 / 1.05, but this file's own "Ground-truth net" section computes
+> 32 − 13 = **19** (Roywood 4 + Fenside 4 + Brookbanks 4 + Clydesdale 4 +
+> Three-Valleys-area 3). The header now matches the body arithmetic,
+> which is what the main report's tables use (19, 1.11).
 
 ## OSM-strict breakdown
 
@@ -81,7 +87,7 @@ NE — outside. Pleasant View Park courts coincide with Wishing Well Park's thre
 
 If we adopt Brighton's more generous "operates on public land, season membership but partial public
 access" standard, the count rises by some or all of the 13 community-club courts, yielding **22-32**.
-The point estimate of **18** uses a strict reading; **25** would be a defensible middle.
+The strict-reading point estimate is **19** (per the arithmetic above; an earlier draft said 18); **25** would be a defensible middle.
 
 ## Sources
 
