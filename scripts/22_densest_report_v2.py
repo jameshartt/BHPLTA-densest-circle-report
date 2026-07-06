@@ -83,52 +83,41 @@ def main() -> int:
         glob = pd.read_csv(global_csv)
         glob["city_country"] = glob["city"] + " (" + glob["country"] + ")"
 
-        # Ground-truth corrections from the per-city audits in reports/ground_truth/*.md
+        # Ground-truth corrections consolidated in data/processed/ground_truth.csv
+        # (sourced from the per-city audits in reports/ground_truth/*.md).
         # Override OSM-strict densities with audit-corrected values where the
-        # audit found systematic bias.
-        GROUND_TRUTH = {
-            "Paris":           (43, 4.48),
-            "Boston":          (18, 3.59),
-            "New York City":   (31, 2.28),  # Randalls Island McEnroe Academy / Sportime removed (commercial); synthesised river polygons → fair-denom land 13.61
-            "Chicago":         (43, 3.28),  # Lake Michigan polygon added → fair-denom land 13.12
-            "Auckland":        (40, 2.33),
-            "Los Angeles":     ( 8, 0.47),
-            "Toronto":         (19, 1.11),
-            "Sydney":          (27, 1.60),
-            "Melbourne":       (50, 3.07),
-            "Rome":            ( 2, 0.12),
-            "Buenos Aires":    ( 6, 0.54),
-            "San Francisco":   (27, 1.58),
-            "Tokyo (23 wards)":(70, 4.08),
-            "Brussels":        (27, 1.76),
-        }
+        # audit found systematic bias. The chart shows the Step 6 admin-clip
+        # ground-truth densities.
+        gt_rows = pd.read_csv(PROCESSED / "ground_truth.csv").set_index("city")
         for i, row in glob.iterrows():
-            if row["city"] in GROUND_TRUTH:
-                gt_count, gt_density = GROUND_TRUTH[row["city"]]
-                glob.at[i, "densest_public_park"] = gt_count
-                glob.at[i, "density_public_park_per_km2_land"] = gt_density
+            if row["city"] in gt_rows.index:
+                gt = gt_rows.loc[row["city"]]
+                glob.at[i, "densest_public_park"] = int(gt["gt_count"])
+                glob.at[i, "density_public_park_per_km2_land"] = float(gt["adminclip_density"])
 
         # Use Brighton's BHPLTA ground-truth (43 / 10.9 = 3.94) for the
         # global comparison — the specific claim under test.
+        bh_gt = gt_rows.loc["Brighton and Hove"]
         bh_glob = pd.DataFrame({
             "city": ["Brighton and Hove"],
             "city_country": ["Brighton & Hove (UK) — user circle"],
             "country": ["UK"],
-            "densest_public_park": [43],
-            "land_km2": [10.9],
-            "density_public_park_per_km2_land": [3.94],
+            "densest_public_park": [int(bh_gt["gt_count"])],
+            "land_km2": [float(bh_gt["adminclip_land_km2"])],
+            "density_public_park_per_km2_land": [float(bh_gt["adminclip_density"])],
         })
-        # Greater London Step 4 ground-truth = 44 / 15.23 = 2.89 (no audit corrections)
+        # Greater London ground-truth (no audit corrections)
         ldn = uk[uk["city"] == "Greater London"]
         if not ldn.empty:
             row = ldn.iloc[0]
+            ldn_gt = gt_rows.loc["Greater London"]
             ldn_glob = pd.DataFrame({
                 "city": ["Greater London"],
                 "city_country": ["Greater London (UK) — Battersea / Kennington"],
                 "country": ["UK"],
-                "densest_public_park": [44],
+                "densest_public_park": [int(ldn_gt["gt_count"])],
                 "land_km2": [float(row["land_km2"])],
-                "density_public_park_per_km2_land": [2.89],
+                "density_public_park_per_km2_land": [float(ldn_gt["adminclip_density"])],
             })
             glob = pd.concat([bh_glob, ldn_glob, glob], ignore_index=True)
         else:

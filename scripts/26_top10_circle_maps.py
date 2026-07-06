@@ -36,77 +36,64 @@ USER_AGENT = "tennis-courts-analysis/0.1 (research; jameshartt@gmail.com)"
 BRIGHTON_PINK = "#e3174a"
 BRIGHTON_DEEP = "#9d0f33"
 
+def _load_ground_truth() -> dict:
+    """Per-city ground-truth corrections, consolidated in
+    `data/processed/ground_truth.csv` (sourced from the per-city audits in
+    `reports/ground_truth/*.md`). Columns used here:
+
+    - `gt_count`: audited ground-truth court count for this city.
+    - `adminclip_density`: STEP 6 admin-clip ground-truth density.
+    - `fair_land_km2`: STEP 7 fair-denominator land = disc − water (no admin-clip).
+    - `fair_density`: gt_count / fair_land — Step 7's "fair-denominator" density.
+      This is the metric on which Brighton lands at #1 once Tokyo is asterisked
+      on bbox-scope grounds.
+
+    `add_ways` / `remove_ways` are presentation metadata for the map panels —
+    OSM way IDs to draw as audit-recovered (orange ring) even though the strict
+    pipeline excluded them (typically `leisure=sports_centre` polygons wrapping
+    municipal venues that are publicly bookable on the day — the same
+    false-exclusion pattern that affected Brighton's Kingsway / Hove Beach Park).
+    """
+    gt = {}
+    for r in csv.DictReader(open(PROCESSED / "ground_truth.csv")):
+        gt[r["slug"]] = {
+            "gt_count": int(r["gt_count"]),
+            "gt_density": float(r["adminclip_density"]),
+            "fair_land": float(r["fair_land_km2"]),
+            "fair_density": float(r["fair_density"]),
+            "step7_exclude": r["step7_excluded"].strip() == "yes",
+            "note": r["note"],
+            "add_ways": [],
+            "remove_ways": [],
+        }
+    # Centre sportif Léo Lagrange (Bois de Vincennes) — 15 ways in the OSM
+    # cache, all sport=tennis, polygon tagged leisure=sports_centre but
+    # publicly bookable via tennis.paris.fr.
+    gt["paris"]["add_ways"] = [
+        99993696, 99993697, 99993699, 99993703, 99993710, 99993711,
+        211358364, 211358365, 211358366, 211358367, 211358368, 211358369,
+        211358371, 211358373, 211358374,
+    ]
+    return gt
+
+
+GROUND_TRUTH = _load_ground_truth()
+
 # Brighton's USER circle parameters (with Hove Beach Park ground-truth correction).
 # Anchors: Queens (south-east court, way 127064771) / Kingsway / Blakers / Pavilion & Avenue.
+# Geometry from brighton_circle_land.json; counts/density from ground_truth.csv.
+_bh_geom = json.loads((PROCESSED / "brighton_circle_land.json").read_text())
+_bh_gt = GROUND_TRUTH["brighton_and_hove"]
 BH_CIRCLE = {
     "city": "Brighton and Hove",
     "country": "UK",
-    "lat": 50.82567,
-    "lon": -0.15648,
-    "radius_m": 2336.78,
-    "park_courts": 43,  # 37 OSM-strict + 6 Hove Beach Park (BHCC-confirmed)
-    "land_km2": 10.9,
-    "density": 3.94,
+    "lat": _bh_geom["center_lat"],
+    "lon": _bh_geom["center_lon"],
+    "radius_m": _bh_geom["radius_m"],
+    "park_courts": _bh_gt["gt_count"],  # 37 OSM-strict + 6 Hove Beach Park (BHCC-confirmed)
+    "land_km2": _bh_gt["fair_land"],
+    "density": _bh_gt["fair_density"],
     "annotation": "user-defined circle\nQueens / Pavilion & Avenue / Kingsway / Blakers",
-}
-
-
-# Per-city ground-truth corrections sourced from `reports/ground_truth/*.md`.
-# `add_ways`: OSM way IDs to include even though the strict pipeline excluded them
-#   (typically `leisure=sports_centre` polygons wrapping municipal venues that are
-#    publicly bookable on the day — the same false-exclusion pattern that affected
-#    Brighton's Kingsway / Hove Beach Park).
-# `gt_count`: BHPLTA-equivalent ground-truth court count for this city.
-# `gt_density`: STEP 6 admin-clip ground-truth density (Paris 4.48 etc.).
-# `fair_land`: STEP 7 fair-denominator land = disc − water (no admin-clip).
-# `fair_density`: gt_count / fair_land — Step 7's "fair-denominator" density.
-#   This is the metric on which Brighton lands at #1 once Tokyo is asterisked
-#   on bbox-scope grounds.
-GROUND_TRUTH = {
-    "paris": {
-        "gt_count": 43,
-        "gt_density": 4.48,
-        "fair_land": 16.78,
-        "fair_density": 2.56,
-        "add_ways": [
-            # Centre sportif Léo Lagrange (Bois de Vincennes) — 15 ways in OSM cache,
-            # all sport=tennis, polygon tagged leisure=sports_centre but publicly
-            # bookable via tennis.paris.fr.
-            99993696, 99993697, 99993699, 99993703, 99993710, 99993711,
-            211358364, 211358365, 211358366, 211358367, 211358368, 211358369,
-            211358371, 211358373, 211358374,
-        ],
-        "remove_ways": [],
-        "note": "+16 Léo Lagrange municipal courts (publicly bookable, mis-filtered as 'club')",
-    },
-    "boston":         {"gt_count": 18, "gt_density": 3.59, "fair_land": 16.68, "fair_density": 1.08, "add_ways": [], "remove_ways": [], "note": "no corrections — Daly Field DCR verified public"},
-    "new_york_city": {
-        "gt_count": 31, "gt_density": 2.28, "fair_land": 13.61, "fair_density": 2.28,
-        "add_ways": [],
-        "remove_ways": [
-            # Randalls Island Park Tennis Center — operated by Sportime as the
-            # John McEnroe Tennis Academy / Cary Leeds Center. The complex sits
-            # on NYC Parks land but is a private/commercial academy — not
-            # bookable on the day by a member of the public as a park-tennis
-            # court (you book Sportime, who charge commercial academy rates).
-            1117878122, 1117878123, 1117878124, 1117878125, 1117878126,
-            1117878128, 1117878129, 1117878130, 1117878131, 1117878132,
-            1117878133, 1117878134, 1117878135, 1117878136, 1117878137,
-        ],
-        "note": "−15 Randalls Island (McEnroe Academy / Sportime, commercial academy on parks land). NYC water (Harlem River + East River + Hell Gate + Bronx Kill) had to be synthesised by buffering OSM waterway centerlines — OSM uses natural=coastline (lines) for NYC tidal waters, not natural=water polygons. Synthesised water ≈ 3.55 km².",
-    },
-    "chicago":        {"gt_count": 43, "gt_density": 3.28, "fair_land": 13.12, "fair_density": 3.28, "add_ways": [], "remove_ways": [], "note": "+8 Washington Park Refectory cluster trimmed by polygon edge; Lake Michigan polygon (relation 1205149) added to water-subtraction — 3.64 km² of disc is lake"},
-    "auckland":       {"gt_count": 40, "gt_density": 2.33, "fair_land": 17.15, "fair_density": 2.33, "add_ways": [], "remove_ways": [], "note": "no corrections"},
-    "los_angeles":    {"gt_count":  8, "gt_density": 0.47, "fair_land": 17.15, "fair_density": 0.47, "add_ways": [], "remove_ways": [], "note": "−27 SMMNRA federal protected-area overlay catches private CCs and luxury home courts"},
-    "toronto":        {"gt_count": 19, "gt_density": 1.11, "fair_land": 17.10, "fair_density": 1.11, "add_ways": [], "remove_ways": [], "note": "−13 community tennis clubs on park land that require club membership"},
-    "sydney":         {"gt_count": 27, "gt_density": 1.60, "fair_land": 16.88, "fair_density": 1.60, "add_ways": [], "remove_ways": [], "note": "no corrections — all council-tagged"},
-    "melbourne":      {"gt_count": 50, "gt_density": 3.07, "fair_land": 16.31, "fair_density": 3.07, "add_ways": [], "remove_ways": [], "note": "+24 Melbourne Park NTC Pay-&-Play outdoor courts (sports_centre)"},
-    "rome":           {"gt_count":  2, "gt_density": 0.12, "fair_land": 17.14, "fair_density": 0.12, "add_ways": [], "remove_ways": [], "note": "−24 private FIT circoli leasing land inside the Valle dei Casali nature reserve"},
-    "buenos_aires":   {"gt_count":  6, "gt_density": 0.54, "fair_land": 17.15, "fair_density": 0.35, "add_ways": [], "remove_ways": [], "note": "−7 Club Comunicaciones members-only concession at Parque Sarmiento"},
-    "san_francisco":  {"gt_count": 27, "gt_density": 1.58, "fair_land": 17.09, "fair_density": 1.58, "add_ways": [], "remove_ways": [], "note": "−2 St Francis Wood HOA, +9 SFRPD inside park-and-sports_centre overlap"},
-    "tokyo_23_wards": {"gt_count": 70, "gt_density": 4.08, "fair_land": 17.14, "fair_density": 4.08, "add_ways": [], "remove_ways": [], "note": "+52 OSM park-polygon gaps (Tokyo-side ~25-30 only; bbox scope includes Saitama)", "step7_exclude": True},
-    "brussels":       {"gt_count": 27, "gt_density": 1.76, "fair_land": 16.79, "fair_density": 1.61, "add_ways": [], "remove_ways": [], "note": "+11 ADEPS Forêt de Soignes, +3 Trois Tilleuls — both municipal sports_centres"},
-    "greater_london": {"gt_count": 44, "gt_density": 2.89, "fair_land": 15.24, "fair_density": 2.89, "add_ways": [], "remove_ways": [], "note": "no corrections — all 8 venues are Will To Win / Lambeth Parks Tennis / Southwark public"},
 }
 
 
